@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VPC Lattice Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #4B0082;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello from ECS Service!</h1>
+    <p>This is a test response from VPC Lattice demo.</p>
+    <p>Container is running from a private ECR repository.</p>
+    <p>Current time: <span id="current-time"></span></p>
+    
+    <script>
+        document.getElementById('current-time').textContent = new Date().toISOString();
+    </script>
+</body>
+</html>
