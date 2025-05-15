@@ -35,36 +35,32 @@
 - Terraform >= 1.0.0
 - AWS CLI がセットアップおよび認証済み
 
-### デプロイ手順
+### Lattice PrivateLink以外の構築手順
 
-2. リポジトリをクローン
+1. リポジトリをクローン
 ```bash
 git clone <repository-url>
 cd VPC-Lattice-Demo/terraform
 ```
 
-1. AWSプロファイルの作成
+2. AWSプロファイルの作成
 「~/.aws/credentials」に「vpc-lattice-demo」プロファイルを設定する
 
 
-1. Terraform の初期化
+3. Terraform の初期化
 ```bash
 terraform init
 ```
 
-1. 実行計画の確認
+4. 実行計画の確認
 ```bash
 terraform plan
 ```
 
-1. インフラのデプロイ
+5. 環境構築
 ```bash
 terraform apply
 ```
-
-## VPC Lattice / PrivateLink の設定
-
-技術ブログ本編を参照してください。
 
 ## ECRイメージのプッシュ手順
 
@@ -80,6 +76,11 @@ chmod +x push_image.sh
 # 3. スクリプトを実行してDockerイメージをビルドしてプッシュ
 ./push_image.sh --profile vpc-lattice-demo
 ```
+
+## VPC Lattice / PrivateLink の設定
+
+技術ブログ本編を参照してください。
+https://zenn.dev/nttdata_tech/articles/ed168dc2c1648e
 
 ## 検証方法
 
